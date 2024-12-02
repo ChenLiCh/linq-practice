@@ -8,9 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace prjPosDemo.Views {
-    public partial class FrmCustomerList : Form {
-        public FrmCustomerList() {
+namespace prjPosDemo.Views
+{
+    public partial class FrmCustomerList : Form
+    {
+        public FrmCustomerList()
+        {
             InitializeComponent();
         }
 
@@ -21,17 +24,19 @@ namespace prjPosDemo.Views {
 
         private void displayCustomers()
         {
-            dbDemoEntities3 db=new dbDemoEntities3();
-            var x=from c in db.tCustomer
-                select c;
+            dbDemoEntities3 db = new dbDemoEntities3();
+            var x = from c in db.tCustomer
+                    select c;
             dataGridView1.DataSource = x.ToList();
             resetGridStyle();
 
             cboCustomerName.Items.Clear();
-            foreach(var t in x)
+            cboCustomerName.Items.Add("顯示所有");
+            foreach (var t in x)
             {
                 cboCustomerName.Items.Add(t.fName);
             }
+            
         }
 
         private void resetGridStyle()
@@ -67,7 +72,7 @@ namespace prjPosDemo.Views {
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            dbDemoEntities3 db= new dbDemoEntities3();
+            dbDemoEntities3 db = new dbDemoEntities3();
             var x = from c in db.tCustomer
                     where c.fEmail.Contains("@gmail.com") && c.fAddress == "Taipei"
                     select c;
@@ -78,7 +83,24 @@ namespace prjPosDemo.Views {
         private void cboCustomerName_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(cboCustomerName.Text)) return;
-            MessageBox.Show(cboCustomerName.Text);
+            //MessageBox.Show(cboCustomerName.Text);
+
+            dbDemoEntities3 db = new dbDemoEntities3();
+            if (cboCustomerName.Text == "顯示所有")
+            {
+                var tb = from c in db.tCustomer
+                         select c;
+                dataGridView1.DataSource = tb.ToList();
+            }
+            else
+            {
+                var tb = from c in db.tCustomer
+                         where c.fName == cboCustomerName.Text
+                         select c;
+                dataGridView1.DataSource = tb.ToList();
+            }
+
+            resetGridStyle();
         }
     }
 }
