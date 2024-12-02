@@ -16,6 +16,8 @@ namespace prjPosDemo.Views
     public partial class FrmCustomerList : Form
     {
         private int _pageCount = 3;
+        int _position = -1;
+        private List<tCustomer> _list;
         public FrmCustomerList()
         {
             InitializeComponent();
@@ -31,7 +33,9 @@ namespace prjPosDemo.Views
             dbDemoEntities3 db = new dbDemoEntities3();
             var x = from c in db.tCustomer
                     select c;
-            dataGridView1.DataSource = x.ToList();
+
+            _list = x.ToList();
+            dataGridView1.DataSource = _list;
             resetGridStyle();
 
             cboCustomerName.Items.Clear();
@@ -200,5 +204,40 @@ namespace prjPosDemo.Views
                 displayCustomers();
             }
         }
+
+        private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            _position = e.RowIndex;
+        }
+
+        // 刪除按鈕
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (_position < 0) return;
+            tCustomer t = _list[_position];
+            MessageBox.Show(t.fId.ToString());
+        }
+
+        //public void callM1()
+        //{
+        //    D1 d = new D1(this.m1);
+        //    MessageBox.Show(d.ToString());
+        //}
+
+        public void callM1()
+        {
+            D1 d = delegate (string p)
+            {
+                return "Hello," + p;
+            };
+            MessageBox.Show(d("macro"));
+        }
+
+        public string m1(string p)
+        {
+            return "Hello," + p;
+        }
+
+        public delegate string D1(string P);
     }
 }
