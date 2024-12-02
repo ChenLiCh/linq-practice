@@ -214,8 +214,21 @@ namespace prjPosDemo.Views
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (_position < 0) return;
-            tCustomer t = _list[_position];
-            MessageBox.Show(t.fId.ToString());
+            tCustomer uiCustomer = _list[_position]; // 畫面上的資料
+            dbDemoEntities3 db = new dbDemoEntities3();
+
+            // FirstOrDefault 是 C# LINQ（Language Integrated Query）的一個方法，用於從集合中檢索符合條件的第一個元素。
+            // 如果找不到符合條件的元素，會返回集合的默認值（對於參考型別是 null，對於數值型別是該數值型別的默認值，例如 0）
+
+            // 把 db.tCustomer 這個集合中的每一筆資料依序代入 t，如果符合後面的條件，就會返回第一筆符合的資料，
+            // 如果找不到符合條件的資料，會返回 db.tCustomer 的默認值
+            tCustomer dbCustomer = db.tCustomer.FirstOrDefault(t => t.fId == uiCustomer.fId); // 真正存在資料庫裡的資料
+            
+            if (dbCustomer == null) return;
+            db.tCustomer.Remove(dbCustomer);
+            db.SaveChanges();
+            displayCustomers();
+            //MessageBox.Show(t.fId.ToString());
         }
 
         //public void callM1()
@@ -226,6 +239,15 @@ namespace prjPosDemo.Views
 
         public void callM1()
         {
+            // 使用 delegate 關鍵字定義了一個匿名方法，這個方法的實現如下：
+            // 接受一個參數 string p。
+            // 回傳字串 "Hello," 與參數 p 的組合結果。
+
+            // 匿名方法類似於一般的方法，但它沒有名稱，並且可以直接被指派給委派類型的變數。
+
+            // D1 d 是委派類型的變數。
+            // 使用 = 將匿名方法指派給變數 d。
+            // 之後，變數 d 就可以被用來像函式一樣呼叫這個匿名方法。
             D1 d = delegate (string p)
             {
                 return "Hello," + p;
