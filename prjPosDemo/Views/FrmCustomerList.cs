@@ -1,4 +1,5 @@
-﻿using System;
+﻿using prjAdoDotNetDemo.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace prjPosDemo.Views
 {
     public partial class FrmCustomerList : Form
     {
+        private int _pageCount = 3;
         public FrmCustomerList()
         {
             InitializeComponent();
@@ -34,9 +38,16 @@ namespace prjPosDemo.Views
             cboCustomerName.Items.Add("顯示所有");
             foreach (var t in x)
             {
-                cboCustomerName.Items.Add(t.fName);
+                cboCustomerName.Items.Add(t.fName + " [" + t.fEmail + "] ");
             }
-            
+
+            cboPage.Items.Clear();
+            int page = x.ToList().Count / _pageCount;
+            if (x.ToList().Count % _pageCount > 0) page++;
+            for (int i = 1; i <= page; i++)
+            {
+                cboPage.Items.Add(i.ToString());
+            }
         }
 
         private void resetGridStyle()
@@ -44,9 +55,14 @@ namespace prjPosDemo.Views
             // 設定各欄位寬度
             dataGridView1.Columns[0].Width = 50;
             dataGridView1.Columns[1].Width = 100;
-            dataGridView1.Columns[2].Width = 200;
-            dataGridView1.Columns[3].Width = 200;
-            dataGridView1.Columns[4].Width = 200;
+
+            if (dataGridView1.Columns.Count > 2)
+            {
+                dataGridView1.Columns[2].Width = 200;
+                dataGridView1.Columns[3].Width = 200;
+                dataGridView1.Columns[4].Width = 200;
+            }
+
             //dataGridView1.Columns[6].Width = 200;
             // RowHeadersWidth: 第一個欄位(只有箭頭)的寬度
             //dataGridView1.Columns[5].Width = dataGridView1.Width - 50 - 400 - 100 * 3 - 200 - dataGridView1.RowHeadersWidth;
@@ -88,19 +104,88 @@ namespace prjPosDemo.Views
             dbDemoEntities3 db = new dbDemoEntities3();
             if (cboCustomerName.Text == "顯示所有")
             {
-                var tb = from c in db.tCustomer
-                         select c;
-                dataGridView1.DataSource = tb.ToList();
+                displayCustomers();
             }
             else
             {
                 var tb = from c in db.tCustomer
-                         where c.fName == cboCustomerName.Text
+                         where (c.fName + " [" + c.fEmail + "]") == cboCustomerName.Text
                          select c;
                 dataGridView1.DataSource = tb.ToList();
             }
 
             resetGridStyle();
+        }
+
+        // NEW 按鈕
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            // 這段程式碼是使用 Entity Framework 的語法，從資料庫中提取特定資料表(tCustomer) 的數據，
+            // 並篩選出兩個欄位(fEmail 和 fPassword)，然後將這些欄位的內容重新命名為 "帳號" 和 "密碼"。
+            dbDemoEntities3 db = new dbDemoEntities3();
+            // 從每一筆資料中選取欄位 fEmail 和 fPassword，
+            // 使用匿名類型(new { ... }) 把結果中的欄位重命名為：
+            // 帳號 對應資料表中的 fEmail。
+            // 密碼 對應資料表中的 fPassword。
+            var tb = from c in db.tCustomer
+                     select new { 帳號 = c.fEmail, 密碼 = c.fPassword };
+            dataGridView1.DataSource = tb.ToList();
+            resetGridStyle();
+        }
+
+        // Order By 按鈕
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            dbDemoEntities3 db = new dbDemoEntities3();
+            var tb = from c in db.tCustomer
+                     orderby c.fName descending
+                     select c;
+            dataGridView1.DataSource = tb.ToList();
+            resetGridStyle();
+        }
+
+        // Take button
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            dbDemoEntities3 db = new dbDemoEntities3();
+            var tb = from c in db.tCustomer
+                     orderby c.fName descending
+                     select c;
+            // tb.Take(2)：從排序結果中取出前 2 筆 資料。
+            dataGridView1.DataSource = tb.Take(2).ToList();
+            resetGridStyle();
+        }
+
+        // Skip button
+        private void toolStripButton7_Click(object sender, EventArgs e)
+        {
+            dbDemoEntities3 db = new dbDemoEntities3();
+            var tb = from c in db.tCustomer
+                     orderby c.fName descending
+                     select c;
+            // Skip(2)：跳過排序結果的前 2 筆 資料。
+            dataGridView1.DataSource = tb.Skip(2).Take(2).ToList();
+            resetGridStyle();
+        }
+
+        // 選擇不同分頁
+        private void cboPage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //MessageBox.Show(cboPage.SelectedItem.ToString());
+            dbDemoEntities3 db = new dbDemoEntities3();
+            var tb = from c in db.tCustomer
+                     orderby c.fName descending
+                     select c;
+            int n = (Convert.ToInt32(cboPage.Text) - 1) * _pageCount;
+            // 每頁顯示 _pageCount 筆資料
+            dataGridView1.DataSource = tb.Skip(n).Take(_pageCount).ToList();
+            resetGridStyle();
+        }
+
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
+            FrmCustomerEditor f = new FrmCustomerEditor();
+            f.ShowDialog();
         }
     }
 }
