@@ -186,6 +186,19 @@ namespace prjPosDemo.Views
         {
             FrmCustomerEditor f = new FrmCustomerEditor();
             f.ShowDialog();
+
+            if (f.isOk == DialogResult.OK)
+            {
+                dbDemoEntities3 db = new dbDemoEntities3();
+                
+                // 新增資料
+                db.tCustomer.Add(f.customer);
+
+                // SaveChanges() 是 Entity Framework 的方法，把資料存進資料庫
+                db.SaveChanges();
+
+                displayCustomers();
+            }
         }
     }
 }

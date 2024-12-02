@@ -1,4 +1,5 @@
 ﻿
+using prjPosDemo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +12,8 @@ using System.Windows.Forms;
 
 namespace prjAdoDotNetDemo.Views {
     public partial class FrmCustomerEditor : Form {
-        //private CCustomer _customer;
+        // tCustomer 是自動產生的，來源是資料庫匯入的資料
+        private tCustomer _customer;
 
         // DialogResult 是一個枚舉類型，通常用於表示視窗或對話框 (Dialog) 關閉時的結果。當使用 MessageBox 或自定義的對話框時，DialogResult 可以用來判斷使用者選擇的動作，如按下的按鈕（確定、取消、是、否等）。
         // DialogResult 的常用值包括：
@@ -26,29 +28,32 @@ namespace prjAdoDotNetDemo.Views {
             InitializeComponent();
         }
 
-        //public CCustomer customer {
-        //    get {
-        //        if (_customer == null) _customer = new CCustomer();
-        //        // 把在 Editor 頁面的欄位值存到 _customer 物件中
-        //        _customer.fId = Convert.ToInt32(fbId.fieldValue);
-        //        _customer.fName = fbName.fieldValue;
-        //        _customer.fPhone = fbPhone.fieldValue;
-        //        _customer.fEmail = fbEmail.fieldValue;
-        //        _customer.fAddress = fbAddress.fieldValue;
-        //        _customer.fPassword = fbPassword.fieldValue;
-        //        return _customer;
-        //    }
-        //    set {
-        //        _customer = value;
-        //        // 把在 _customer 物件中的值取出，填入 Editor 頁面的欄位 
-        //        fbId.fieldValue = _customer.fId.ToString();
-        //        fbName.fieldValue = _customer.fName;
-        //        fbPhone.fieldValue = _customer.fPhone;
-        //        fbEmail.fieldValue = _customer.fEmail;
-        //        fbAddress.fieldValue = _customer.fAddress;
-        //        fbPassword.fieldValue = _customer.fPassword;
-        //    }
-        //}
+        public tCustomer customer
+        {
+            get
+            {
+                if (_customer == null) _customer = new tCustomer();
+                // 把在 Editor 頁面的欄位值存到 _customer 物件中
+                _customer.fId = Convert.ToInt32(fbId.fieldValue);
+                _customer.fName = fbName.fieldValue;
+                _customer.fPhone = fbPhone.fieldValue;
+                _customer.fEmail = fbEmail.fieldValue;
+                _customer.fAddress = fbAddress.fieldValue;
+                _customer.fPassword = fbPassword.fieldValue;
+                return _customer;
+            }
+            set
+            {
+                _customer = value;
+                // 把在 _customer 物件中的值取出，填入 Editor 頁面的欄位 
+                fbId.fieldValue = _customer.fId.ToString();
+                fbName.fieldValue = _customer.fName;
+                fbPhone.fieldValue = _customer.fPhone;
+                fbEmail.fieldValue = _customer.fEmail;
+                fbAddress.fieldValue = _customer.fAddress;
+                fbPassword.fieldValue = _customer.fPassword;
+            }
+        }
 
         private void button1_Click(object sender, EventArgs e) {
             this.isOk = DialogResult.OK;
