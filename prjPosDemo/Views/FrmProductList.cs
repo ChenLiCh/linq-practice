@@ -117,6 +117,7 @@ namespace prjPosDemo.Views
             displayProducts();
         }
 
+        // 編輯按鈕
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
             editProductSelected();
