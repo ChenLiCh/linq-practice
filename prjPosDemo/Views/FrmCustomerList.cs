@@ -231,6 +231,7 @@ namespace prjPosDemo.Views
             //MessageBox.Show(t.fId.ToString());
         }
 
+        // delegate 逐漸轉變成 Lambda 的過程==========================================
         //public void callM1()
         //{
         //    D1 d = new D1(this.m1);
@@ -261,5 +262,6 @@ namespace prjPosDemo.Views
         }
 
         public delegate string D1(string P);
+        // delegate 逐漸轉變成 Lambda 的過程==========================================
     }
 }
