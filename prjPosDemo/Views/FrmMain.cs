@@ -14,10 +14,20 @@ namespace prjPosDemo.Views {
             InitializeComponent();
         }
 
+        // 客戶管理按鈕
         private void toolStripButton4_Click(object sender, EventArgs e) {
             FrmCustomerList f =new FrmCustomerList();
             f.MdiParent = this;
             f.WindowState = FormWindowState.Maximized;
+            f.Show();
+        }
+
+        // 商品管理按鈕
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            FrmProductList f = new FrmProductList();
+            f.MdiParent = this;
+            f.WindowState=FormWindowState.Maximized;
             f.Show();
         }
     }

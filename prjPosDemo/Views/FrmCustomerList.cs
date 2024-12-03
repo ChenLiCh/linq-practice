@@ -182,7 +182,8 @@ namespace prjPosDemo.Views
                      select c;
             int n = (Convert.ToInt32(cboPage.Text) - 1) * _pageCount;
             // 每頁顯示 _pageCount 筆資料
-            dataGridView1.DataSource = tb.Skip(n).Take(_pageCount).ToList();
+            _list = tb.Skip(n).Take(_pageCount).ToList();
+            dataGridView1.DataSource = _list;
             resetGridStyle();
         }
 
@@ -194,7 +195,7 @@ namespace prjPosDemo.Views
             if (f.isOk == DialogResult.OK)
             {
                 dbDemoEntities3 db = new dbDemoEntities3();
-                
+
                 // 新增資料
                 db.tCustomer.Add(f.customer);
 
@@ -229,12 +230,65 @@ namespace prjPosDemo.Views
             // 把 db.tCustomer 這個集合中的每一筆資料依序代入 t，如果符合後面的條件，就會返回第一筆符合的資料，
             // 如果找不到符合條件的資料，會返回 db.tCustomer 的默認值
             tCustomer dbCustomer = db.tCustomer.FirstOrDefault(t => t.fId == uiCustomer.fId); // 真正存在資料庫裡的資料
-            
+
             if (dbCustomer == null) return;
             db.tCustomer.Remove(dbCustomer);
             db.SaveChanges();
+
+            // 全域變數 _list 裡面的資料也要跟著刪除
+            _list.RemoveAt(_position);
+
             displayCustomers();
             //MessageBox.Show(t.fId.ToString());
+        }
+
+        // 修改按鈕
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            editCustomerSelected();
+        }
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            editCustomerSelected();
+        }
+        private void editCustomerSelected()
+        {
+            if (_position < 0) return;
+
+            // 顯示舊資料
+            tCustomer uiCustomer = _list[_position];
+            FrmCustomerEditor f = new FrmCustomerEditor();
+            f.customer = uiCustomer; // f.customer = uiCustomer = _list[_position] 這 3 個其中一個資料改變，會影響到其他兩個的資料
+            f.ShowDialog();
+
+            // 按下確定後，把修改後的資料存進資料庫
+            if (f.isOk == DialogResult.OK)
+            {
+                dbDemoEntities3 db = new dbDemoEntities3();
+                tCustomer dbCustomer = db.tCustomer.FirstOrDefault(t => t.fId == f.customer.fId);
+                if (dbCustomer == null) return;
+                dbCustomer.fName = f.customer.fName;
+                dbCustomer.fPhone = f.customer.fPhone;
+                dbCustomer.fEmail = f.customer.fEmail;
+                dbCustomer.fAddress = f.customer.fAddress;
+                dbCustomer.fPassword = f.customer.fPassword;
+                db.SaveChanges();
+                MessageBox.Show(_list[_position].fName);
+                displayCustomers();
+            }
+        }
+
+        // 查詢
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            dbDemoEntities3 db = new dbDemoEntities3();
+            var x = from c in db.tCustomer
+                    where c.fName.Contains(txtKeyword.Text) || c.fEmail.Contains(txtKeyword.Text) || c.fAddress.Contains(txtKeyword.Text)
+                    select c;
+
+            _list = x.ToList();
+            dataGridView1.DataSource = _list;
+            resetGridStyle();
         }
 
         // delegate 逐漸轉變成 Lambda 的過程==========================================
