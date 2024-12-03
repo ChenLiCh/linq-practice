@@ -13,5 +13,18 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="tProduct">
+      <EntityTypeMapping TypeName="dbDemoModel.tProduct">
+        <MappingFragment StoreEntitySet="tProduct">
+          <ScalarProperty Name="fImage" ColumnName="fImage" />
+          <ScalarProperty Name="fMemo" ColumnName="fMemo" />
+          <ScalarProperty Name="fPrice" ColumnName="fPrice" />
+          <ScalarProperty Name="fCost" ColumnName="fCost" />
+          <ScalarProperty Name="fQty" ColumnName="fQty" />
+          <ScalarProperty Name="fName" ColumnName="fName" />
+          <ScalarProperty Name="fId" ColumnName="fId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

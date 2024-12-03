@@ -26,5 +26,6 @@ namespace prjPosDemo
         }
     
         public virtual DbSet<tCustomer> tCustomer { get; set; }
+        public virtual DbSet<tProduct> tProduct { get; set; }
     }
 }

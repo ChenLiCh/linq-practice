@@ -81,6 +81,9 @@
     <Compile Include="tCustomer.cs">
       <DependentUpon>dbDemo.tt</DependentUpon>
     </Compile>
+    <Compile Include="tProduct.cs">
+      <DependentUpon>dbDemo.tt</DependentUpon>
+    </Compile>
     <Compile Include="Views\FieldBox.cs">
       <SubType>UserControl</SubType>
     </Compile>

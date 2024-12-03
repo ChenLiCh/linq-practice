@@ -13,5 +13,18 @@
   </EntityType>
   <EntityContainer Name="dbDemoEntities3" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="tCustomer" EntityType="Self.tCustomer" />
+    <EntitySet Name="tProduct" EntityType="dbDemoModel.tProduct" />
   </EntityContainer>
+  <EntityType Name="tProduct">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fQty" Type="Int32" />
+    <Property Name="fCost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="fPrice" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="fMemo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fImage" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
 </Schema>
