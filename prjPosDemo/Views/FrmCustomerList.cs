@@ -187,6 +187,7 @@ namespace prjPosDemo.Views
             resetGridStyle();
         }
 
+        // 新增按鈕
         private void btnInsert_Click(object sender, EventArgs e)
         {
             FrmCustomerEditor f = new FrmCustomerEditor();
@@ -239,7 +240,6 @@ namespace prjPosDemo.Views
             _list.RemoveAt(_position);
 
             displayCustomers();
-            //MessageBox.Show(t.fId.ToString());
         }
 
         // 修改按鈕
@@ -273,7 +273,7 @@ namespace prjPosDemo.Views
                 dbCustomer.fAddress = f.customer.fAddress;
                 dbCustomer.fPassword = f.customer.fPassword;
                 db.SaveChanges();
-                MessageBox.Show(_list[_position].fName);
+                //MessageBox.Show(_list[_position].fName);
                 displayCustomers();
             }
         }

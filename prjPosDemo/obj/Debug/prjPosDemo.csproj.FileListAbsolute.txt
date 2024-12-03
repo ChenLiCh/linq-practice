@@ -94,3 +94,4 @@ C:\Users\User\Desktop\learn\slnDemo-linq\slnDemo-linq\prjPosDemo\obj\Debug\prjPo
 C:\Users\User\Desktop\learn\slnDemo-linq\slnDemo-linq\prjPosDemo\obj\Debug\prjPosDemo.csproj.Up2Date
 C:\Users\User\Desktop\learn\slnDemo-linq\slnDemo-linq\prjPosDemo\obj\Debug\prjPosDemo.exe
 C:\Users\User\Desktop\learn\slnDemo-linq\slnDemo-linq\prjPosDemo\obj\Debug\prjPosDemo.pdb
+C:\Users\User\Desktop\learn\slnDemo-linq\slnDemo-linq\prjPosDemo\obj\Debug\prjPosDemo.Views.FrmProductEditor.resources

@@ -108,6 +108,12 @@
     <Compile Include="Views\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\FrmProductEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmProductEditor.Designer.cs">
+      <DependentUpon>FrmProductEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FrmProductList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FrmCustomerEditor.resx">
       <DependentUpon>FrmCustomerEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmProductEditor.resx">
+      <DependentUpon>FrmProductEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FrmProductList.resx">
       <DependentUpon>FrmProductList.cs</DependentUpon>
