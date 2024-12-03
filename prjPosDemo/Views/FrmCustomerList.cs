@@ -214,6 +214,12 @@ namespace prjPosDemo.Views
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (_position < 0) return;
+
+            // 第一個參數: "確定要刪除嗎?" 是對話框中顯示的訊息，表示詢問使用者是否確定要刪除。
+            // 第二個參數: "確認" 是對話框的標題，表示該對話框的用途。
+            // 第三個參數: MessageBoxButtons.YesNo 是按鈕選項，表示該對話框會有「是(Yes)」和「否(No)」兩個選擇。
+            if (MessageBox.Show("確定要刪除嗎?", "確認", MessageBoxButtons.YesNo) == DialogResult.No) return;
+
             tCustomer uiCustomer = _list[_position]; // 畫面上的資料
             dbDemoEntities3 db = new dbDemoEntities3();
 
