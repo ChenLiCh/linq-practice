@@ -159,5 +159,31 @@ namespace prjPosDemo.Views
         {
             _position = e.RowIndex;
         }
+
+        // 搜尋按鈕
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            dbDemoEntities3 db = new dbDemoEntities3();
+
+            // 原本的語法==================================================
+            //var x = from c in db.tProduct
+            //        where c.fName.Contains(txtKeyword.Text) || c.fMemo.Contains(txtKeyword.Text)
+            //        select c;
+            //_list = x.ToList();
+            //dataGridView1.DataSource = _list;
+            // ============================================================
+
+            // 第 2 種寫法
+            // _list = db.tProduct.Where(c => c.fName.Contains(txtKeyword.Text) || c.fMemo.Contains(txtKeyword.Text)).ToList();
+            // dataGridView1.DataSource = _list;
+            // ============================================================
+
+            // 第 3 種寫法
+            // 這個語法也可以直接用在 list 物件上
+            dataGridView1.DataSource = _list.Where(c => c.fName.Contains(txtKeyword.Text) || c.fMemo.Contains(txtKeyword.Text)).ToList();
+            // ============================================================
+
+            resetGridStyle();
+        }
     }
 }
