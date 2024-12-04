@@ -11,14 +11,24 @@ namespace prjPosDemo
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class tCustomer
     {
         public int fId { get; set; }
+
+        [DisplayName("姓名")]
         public string fName { get; set; }
+
+        [DisplayName("電話")]
         public string fPhone { get; set; }
+
         public string fEmail { get; set; }
+
+        [DisplayName("地址")]
         public string fAddress { get; set; }
+
+        [DisplayName("密碼")]
         public string fPassword { get; set; }
     }
 }

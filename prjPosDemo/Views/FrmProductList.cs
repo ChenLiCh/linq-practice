@@ -181,7 +181,8 @@ namespace prjPosDemo.Views
 
             // 第 3 種寫法
             // 這個語法也可以直接用在 list 物件上
-            dataGridView1.DataSource = _list.Where(c => c.fName.Contains(txtKeyword.Text) || c.fMemo.Contains(txtKeyword.Text)).ToList();
+            // 這邊有另外加入無視大小寫的設定
+            dataGridView1.DataSource = _list.Where(c => c.fName.ToLower().Contains(txtKeyword.Text.ToLower()) || c.fMemo.ToLower().Contains(txtKeyword.Text.ToLower())).ToList();
             // ============================================================
 
             resetGridStyle();
