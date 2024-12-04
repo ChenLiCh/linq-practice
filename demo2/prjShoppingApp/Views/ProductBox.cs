@@ -15,21 +15,21 @@ namespace prjShoppingApp.Views
     public partial class ProductBox : UserControl
     {
         public event DProductClick addToCart;
-        private tProduct _room;
+        private tProduct _product;
         public ProductBox()
         {
             InitializeComponent();
         }
         public tProduct product
         {
-            get { return _room; }
+            get { return _product; }
             set
             {
-                _room = value;
-                lblMemo.Text = _room.fMemo;
-                lblName.Text = _room.fName;
-                lblPrice.Text = _room.fPrice.ToString();
-                Stream s = new MemoryStream(_room.fImage);
+                _product = value;
+                lblMemo.Text = _product.fMemo;
+                lblName.Text = _product.fName;
+                lblPrice.Text = _product.fPrice.ToString();
+                Stream s = new MemoryStream(_product.fImage);
                 pictureBox1.Image = Bitmap.FromStream(s);
             }
         }
@@ -37,25 +37,25 @@ namespace prjShoppingApp.Views
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             if (addToCart != null)
-                addToCart(this._room);
+                addToCart(this._product);
         }
 
         private void lblName_Click(object sender, EventArgs e)
         {
             if (addToCart != null)
-                addToCart(this._room);
+                addToCart(this._product);
         }
 
         private void lblMemo_Click(object sender, EventArgs e)
         {
             if (addToCart != null)
-                addToCart(this._room);
+                addToCart(this._product);
         }
 
         private void lblPrice_Click(object sender, EventArgs e)
         {
             if (addToCart != null)
-                addToCart(this._room);
+                addToCart(this._product);
         }
 
     }

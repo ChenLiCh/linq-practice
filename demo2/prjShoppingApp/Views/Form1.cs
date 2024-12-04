@@ -34,17 +34,23 @@ namespace prjShoppingApp
 
         private void displayAll()
         {
+            // flowLayoutPanel1.Controls.Clear() 是用來清除 FlowLayoutPanel 控件中的所有子控件。
             flowLayoutPanel1.Controls.Clear();
+
             dbDemoEntities db = new dbDemoEntities();
-            var datas=from p in  db.tProduct
-                      select p;
-            _allProducts=datas.ToList();
+            var datas = from p in db.tProduct
+                        select p;
+            _allProducts = datas.ToList();
             foreach (var r in datas)
             {
                 ProductBox x = new ProductBox();
                 x.product = r;
                 x.addToCart += this.addToCart;
-                x.Width= 180;
+                x.Width = 180;
+
+                // Controls.Add(x)：將一個控件 x 添加到 flowLayoutPanel1 的控件集合（Controls）中。
+                // x 必須是派生自 Control 的物件，例如 Button、Label、TextBox 等。
+                // 當控件被添加到 FlowLayoutPanel 時，面板會根據其布局規則（例如流式排列）自動將控件放置在適當的位置。
                 flowLayoutPanel1.Controls.Add(x);
             }
         }
@@ -52,18 +58,18 @@ namespace prjShoppingApp
         private void addToCart(tProduct p)
         {
             _product = p;
-            label1.Text=_product.fName;
-            
+            label1.Text = _product.fName;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            tShoppingCart x= new tShoppingCart();
+            tShoppingCart x = new tShoppingCart();
             x.fProductId = _product.fId;
-            x.fCustomerId=_user.fId;
+            x.fCustomerId = _user.fId;
             x.fCount = 1;
 
-            dbDemoEntities db= new dbDemoEntities();
+            dbDemoEntities db = new dbDemoEntities();
             db.tShoppingCart.Add(x);
             db.SaveChanges();
 
@@ -79,19 +85,23 @@ namespace prjShoppingApp
         private void showShoppingCartItems()
         {
             var cart = (new dbDemoEntities()).tShoppingCart.Where(t => t.fCustomerId == _user.fId);
-            List<CShoppingCartItem> list=new List<CShoppingCartItem>();
+            List<CShoppingCartItem> list = new List<CShoppingCartItem>();
             foreach (var t in cart)
             {
                 CShoppingCartItem c = new CShoppingCartItem();
                 tProduct p = _allProducts.FirstOrDefault(p2 => p2.fId == t.fProductId);
-                c.productName=p.fName;
+                c.productName = p.fName;
                 c.count = (int)t.fCount;
-                c.price=(decimal)p.fPrice;
+                c.price = (decimal)p.fPrice;
                 list.Add(c);
             }
             dataGridView1.DataSource = list;
-            label4.Text ="交易金額：＄"+ list.Sum(t=>t.pay).ToString("###,###,##0");
-            label3.Text = "稅　　額：＄" + (list.Sum(t => t.pay)*0.05M).ToString("###,###,##0");           
+            // #: 數字 1~9，沒數字不顯示。 0: 必顯示位數，沒數字補零。
+            label4.Text = "交易金額：＄" + list.Sum(t => t.pay).ToString("###,###,##0");
+
+            // M 是 decimal 類型的後綴，它告訴編譯器這個數字是 decimal，而不是默認的 double 或其他數值類型。
+            // 如果不加 M，0.05 會被當作 double 類型處理。
+            label3.Text = "稅　　額：＄" + (list.Sum(t => t.pay) * 0.05M).ToString("###,###,##0");
             label2.Text = "應付金額：＄" + (list.Sum(t => t.pay) * 1.05M).ToString("###,###,##0");
 
         }
