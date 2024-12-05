@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbDeliveryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tCustomer">
+    <Key>
+      <PropertyRef Name="fCustomerId" />
+    </Key>
+    <Property Name="fCustomerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fCustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fCustomerPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fCustomerEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fCustomerPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fCustomerAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tMeal">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fMealName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="fQuantity" Type="Int32" />
+    <Property Name="fCost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="fPrice" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="fMemo" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <Property Name="fImage" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityContainer Name="dbDeliveryEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tCustomer" EntityType="Self.tCustomer" />
+    <EntitySet Name="tMeal" EntityType="Self.tMeal" />
+  </EntityContainer>
+</Schema>

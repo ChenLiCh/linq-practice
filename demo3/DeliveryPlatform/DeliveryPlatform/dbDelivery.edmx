@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="dbDeliveryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tCustomer">
+          <Key>
+            <PropertyRef Name="fCustomerId" />
+          </Key>
+          <Property Name="fCustomerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fCustomerName" Type="nvarchar" MaxLength="50" />
+          <Property Name="fCustomerPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="fCustomerEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="fCustomerPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="fCustomerAddress" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tMeal">
+          <Key>
+            <PropertyRef Name="fMealId" />
+          </Key>
+          <Property Name="fMealId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fMealName" Type="nchar" MaxLength="50" />
+          <Property Name="fMealQuantity" Type="int" />
+          <Property Name="fMealCost" Type="money" />
+          <Property Name="fMealPrice" Type="money" />
+          <Property Name="fMealMemo" Type="nchar" MaxLength="200" />
+          <Property Name="fMealImage" Type="image" />
+        </EntityType>
+        <EntityContainer Name="dbDeliveryModelStoreContainer">
+          <EntitySet Name="tCustomer" EntityType="Self.tCustomer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tMeal" EntityType="Self.tMeal" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbDeliveryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tCustomer">
+          <Key>
+            <PropertyRef Name="fCustomerId" />
+          </Key>
+          <Property Name="fCustomerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fCustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fCustomerPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fCustomerEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fCustomerPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fCustomerAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="dbDeliveryEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tCustomer" EntityType="Self.tCustomer" />
+          <EntitySet Name="tMeal" EntityType="dbDeliveryModel.tMeal" />
+        </EntityContainer>
+        <EntityType Name="tMeal">
+          <Key>
+            <PropertyRef Name="fMealId" />
+          </Key>
+          <Property Name="fMealId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fMealName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="fMealQuantity" Type="Int32" />
+          <Property Name="fMealCost" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="fMealPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="fMealMemo" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+          <Property Name="fMealImage" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dbDeliveryModelStoreContainer" CdmEntityContainer="dbDeliveryEntities">
+          <EntitySetMapping Name="tCustomer">
+            <EntityTypeMapping TypeName="dbDeliveryModel.tCustomer">
+              <MappingFragment StoreEntitySet="tCustomer">
+                <ScalarProperty Name="fCustomerId" ColumnName="fCustomerId" />
+                <ScalarProperty Name="fCustomerName" ColumnName="fCustomerName" />
+                <ScalarProperty Name="fCustomerPhone" ColumnName="fCustomerPhone" />
+                <ScalarProperty Name="fCustomerEmail" ColumnName="fCustomerEmail" />
+                <ScalarProperty Name="fCustomerPassword" ColumnName="fCustomerPassword" />
+                <ScalarProperty Name="fCustomerAddress" ColumnName="fCustomerAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tMeal">
+            <EntityTypeMapping TypeName="dbDeliveryModel.tMeal">
+              <MappingFragment StoreEntitySet="tMeal">
+                <ScalarProperty Name="fMealImage" ColumnName="fMealImage" />
+                <ScalarProperty Name="fMealMemo" ColumnName="fMealMemo" />
+                <ScalarProperty Name="fMealPrice" ColumnName="fMealPrice" />
+                <ScalarProperty Name="fMealCost" ColumnName="fMealCost" />
+                <ScalarProperty Name="fMealQuantity" ColumnName="fMealQuantity" />
+                <ScalarProperty Name="fMealName" ColumnName="fMealName" />
+                <ScalarProperty Name="fMealId" ColumnName="fMealId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

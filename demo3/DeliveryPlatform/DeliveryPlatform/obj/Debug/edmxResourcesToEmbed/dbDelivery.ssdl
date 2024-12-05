@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbDeliveryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tCustomer">
+    <Key>
+      <PropertyRef Name="fCustomerId" />
+    </Key>
+    <Property Name="fCustomerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fCustomerName" Type="nvarchar" MaxLength="50" />
+    <Property Name="fCustomerPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="fCustomerEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="fCustomerPassword" Type="nvarchar" MaxLength="50" />
+    <Property Name="fCustomerAddress" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tMeal">
+    <Key>
+      <PropertyRef Name="fId" />
+    </Key>
+    <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fMealName" Type="nchar" MaxLength="50" />
+    <Property Name="fQuantity" Type="int" />
+    <Property Name="fCost" Type="money" />
+    <Property Name="fPrice" Type="money" />
+    <Property Name="fMemo" Type="nchar" MaxLength="200" />
+    <Property Name="fImage" Type="image" />
+  </EntityType>
+  <EntityContainer Name="dbDeliveryModelStoreContainer">
+    <EntitySet Name="tCustomer" EntityType="Self.tCustomer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tMeal" EntityType="Self.tMeal" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

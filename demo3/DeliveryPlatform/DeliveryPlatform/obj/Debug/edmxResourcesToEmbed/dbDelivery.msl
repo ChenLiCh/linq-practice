@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbDeliveryModelStoreContainer" CdmEntityContainer="dbDeliveryEntities">
+    <EntitySetMapping Name="tCustomer">
+      <EntityTypeMapping TypeName="dbDeliveryModel.tCustomer">
+        <MappingFragment StoreEntitySet="tCustomer">
+          <ScalarProperty Name="fCustomerId" ColumnName="fCustomerId" />
+          <ScalarProperty Name="fCustomerName" ColumnName="fCustomerName" />
+          <ScalarProperty Name="fCustomerPhone" ColumnName="fCustomerPhone" />
+          <ScalarProperty Name="fCustomerEmail" ColumnName="fCustomerEmail" />
+          <ScalarProperty Name="fCustomerPassword" ColumnName="fCustomerPassword" />
+          <ScalarProperty Name="fCustomerAddress" ColumnName="fCustomerAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tMeal">
+      <EntityTypeMapping TypeName="dbDeliveryModel.tMeal">
+        <MappingFragment StoreEntitySet="tMeal">
+          <ScalarProperty Name="fId" ColumnName="fId" />
+          <ScalarProperty Name="fMealName" ColumnName="fMealName" />
+          <ScalarProperty Name="fQuantity" ColumnName="fQuantity" />
+          <ScalarProperty Name="fCost" ColumnName="fCost" />
+          <ScalarProperty Name="fPrice" ColumnName="fPrice" />
+          <ScalarProperty Name="fMemo" ColumnName="fMemo" />
+          <ScalarProperty Name="fImage" ColumnName="fImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
