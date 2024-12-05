@@ -1,21 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo2\\",
+  "WorkspaceRootPath": "C:\\iSpan\\linq-practice\\demo2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{35217FBC-7CE4-4732-89EB-711555761070}|prjShoppingApp\\prjShoppingApp.csproj|C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo2\\prjshoppingapp\\models\\cshoppingcartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{35217FBC-7CE4-4732-89EB-711555761070}|prjShoppingApp\\prjShoppingApp.csproj|c:\\ispan\\linq-practice\\demo2\\prjshoppingapp\\models\\cshoppingcartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{35217FBC-7CE4-4732-89EB-711555761070}|prjShoppingApp\\prjShoppingApp.csproj|solutionrelative:prjshoppingapp\\models\\cshoppingcartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35217FBC-7CE4-4732-89EB-711555761070}|prjShoppingApp\\prjShoppingApp.csproj|C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo2\\prjshoppingapp\\views\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{35217FBC-7CE4-4732-89EB-711555761070}|prjShoppingApp\\prjShoppingApp.csproj|solutionrelative:prjshoppingapp\\views\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35217FBC-7CE4-4732-89EB-711555761070}|prjShoppingApp\\prjShoppingApp.csproj|c:\\users\\user\\desktop\\learn\\slndemo-linq\\slndemo-linq\\demo2\\prjshoppingapp\\views\\productbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{35217FBC-7CE4-4732-89EB-711555761070}|prjShoppingApp\\prjShoppingApp.csproj|c:\\ispan\\linq-practice\\demo2\\prjshoppingapp\\views\\productbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{35217FBC-7CE4-4732-89EB-711555761070}|prjShoppingApp\\prjShoppingApp.csproj|solutionrelative:prjshoppingapp\\views\\productbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35217FBC-7CE4-4732-89EB-711555761070}|prjShoppingApp\\prjShoppingApp.csproj|C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo2\\prjshoppingapp\\views\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{35217FBC-7CE4-4732-89EB-711555761070}|prjShoppingApp\\prjShoppingApp.csproj|c:\\ispan\\linq-practice\\demo2\\prjshoppingapp\\views\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{35217FBC-7CE4-4732-89EB-711555761070}|prjShoppingApp\\prjShoppingApp.csproj|solutionrelative:prjshoppingapp\\views\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35217FBC-7CE4-4732-89EB-711555761070}|prjShoppingApp\\prjShoppingApp.csproj|c:\\ispan\\linq-practice\\demo2\\prjshoppingapp\\views\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{35217FBC-7CE4-4732-89EB-711555761070}|prjShoppingApp\\prjShoppingApp.csproj|solutionrelative:prjshoppingapp\\views\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -26,57 +26,57 @@
       "DocumentGroups": [
         {
           "DockedWidth": 91,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProductBox.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo2\\prjShoppingApp\\Views\\ProductBox.cs",
-              "RelativeDocumentMoniker": "prjShoppingApp\\Views\\ProductBox.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo2\\prjShoppingApp\\Views\\ProductBox.cs",
-              "RelativeToolTip": "prjShoppingApp\\Views\\ProductBox.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAA3wBYAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T09:34:52.334Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "CShoppingCartItem.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo2\\prjShoppingApp\\Models\\CShoppingCartItem.cs",
+              "DocumentMoniker": "C:\\iSpan\\linq-practice\\demo2\\prjShoppingApp\\Models\\CShoppingCartItem.cs",
               "RelativeDocumentMoniker": "prjShoppingApp\\Models\\CShoppingCartItem.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo2\\prjShoppingApp\\Models\\CShoppingCartItem.cs",
+              "ToolTip": "C:\\iSpan\\linq-practice\\demo2\\prjShoppingApp\\Models\\CShoppingCartItem.cs",
               "RelativeToolTip": "prjShoppingApp\\Models\\CShoppingCartItem.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAASAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T08:24:44.862Z",
+              "WhenOpened": "2024-12-04T14:38:19.411Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [\u8A2D\u8A08]",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo2\\prjShoppingApp\\Views\\Form1.cs",
+              "DocumentMoniker": "C:\\iSpan\\linq-practice\\demo2\\prjShoppingApp\\Views\\Form1.cs",
               "RelativeDocumentMoniker": "prjShoppingApp\\Views\\Form1.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo2\\prjShoppingApp\\Views\\Form1.cs [\u8A2D\u8A08]",
+              "ToolTip": "C:\\iSpan\\linq-practice\\demo2\\prjShoppingApp\\Views\\Form1.cs [\u8A2D\u8A08]",
               "RelativeToolTip": "prjShoppingApp\\Views\\Form1.cs [\u8A2D\u8A08]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T08:13:24.188Z",
+              "WhenOpened": "2024-12-04T14:13:39.42Z",
               "EditorCaption": " [\u8A2D\u8A08]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductBox.cs",
+              "DocumentMoniker": "C:\\iSpan\\linq-practice\\demo2\\prjShoppingApp\\Views\\ProductBox.cs",
+              "RelativeDocumentMoniker": "prjShoppingApp\\Views\\ProductBox.cs",
+              "ToolTip": "C:\\iSpan\\linq-practice\\demo2\\prjShoppingApp\\Views\\ProductBox.cs",
+              "RelativeToolTip": "prjShoppingApp\\Views\\ProductBox.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T13:49:28.749Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo2\\prjShoppingApp\\Views\\Form1.cs",
+              "DocumentMoniker": "C:\\iSpan\\linq-practice\\demo2\\prjShoppingApp\\Views\\Form1.cs",
               "RelativeDocumentMoniker": "prjShoppingApp\\Views\\Form1.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo2\\prjShoppingApp\\Views\\Form1.cs",
+              "ToolTip": "C:\\iSpan\\linq-practice\\demo2\\prjShoppingApp\\Views\\Form1.cs",
               "RelativeToolTip": "prjShoppingApp\\Views\\Form1.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAA1wDQAAAAQAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T06:23:04.451Z",
+              "WhenOpened": "2024-12-04T11:00:17.939Z",
               "EditorCaption": ""
             }
           ]

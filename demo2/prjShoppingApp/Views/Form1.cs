@@ -11,20 +11,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace prjShoppingApp
-{
-    public partial class Form1 : Form
-    {
+namespace prjShoppingApp {
+    public partial class Form1 : Form {
         private tCustomer _user;
         private tProduct _product;
         private List<tProduct> _allProducts;
-        public Form1()
-        {
+        public Form1() {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
+        private void Form1_Load(object sender, EventArgs e) {
             FrmLogin f = new FrmLogin();
             f.ShowDialog();
             _user = f.loginUser;
@@ -32,8 +28,7 @@ namespace prjShoppingApp
             displayAll();
         }
 
-        private void displayAll()
-        {
+        private void displayAll() {
             // flowLayoutPanel1.Controls.Clear() 是用來清除 FlowLayoutPanel 控件中的所有子控件。
             flowLayoutPanel1.Controls.Clear();
 
@@ -41,8 +36,8 @@ namespace prjShoppingApp
             var datas = from p in db.tProduct
                         select p;
             _allProducts = datas.ToList();
-            foreach (var r in datas)
-            {
+
+            foreach (var r in datas) {
                 ProductBox x = new ProductBox();
                 x.product = r;
                 x.addToCart += this.addToCart;
@@ -55,15 +50,14 @@ namespace prjShoppingApp
             }
         }
 
-        private void addToCart(tProduct p)
-        {
+        private void addToCart(tProduct p) {
             _product = p;
             label1.Text = _product.fName;
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+        // 加入購物車按鈕
+        private void button1_Click(object sender, EventArgs e) {
             tShoppingCart x = new tShoppingCart();
             x.fProductId = _product.fId;
             x.fCustomerId = _user.fId;
@@ -76,18 +70,15 @@ namespace prjShoppingApp
             label1.Text = "加入購物車成功";
         }
 
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e) {
             if (tabControl1.SelectedIndex == 1)
                 showShoppingCartItems();
         }
 
-        private void showShoppingCartItems()
-        {
+        private void showShoppingCartItems() {
             var cart = (new dbDemoEntities()).tShoppingCart.Where(t => t.fCustomerId == _user.fId);
             List<CShoppingCartItem> list = new List<CShoppingCartItem>();
-            foreach (var t in cart)
-            {
+            foreach (var t in cart) {
                 CShoppingCartItem c = new CShoppingCartItem();
                 tProduct p = _allProducts.FirstOrDefault(p2 => p2.fId == t.fProductId);
                 c.productName = p.fName;
@@ -96,6 +87,7 @@ namespace prjShoppingApp
                 list.Add(c);
             }
             dataGridView1.DataSource = list;
+
             // #: 數字 1~9，沒數字不顯示。 0: 必顯示位數，沒數字補零。
             label4.Text = "交易金額：＄" + list.Sum(t => t.pay).ToString("###,###,##0");
 

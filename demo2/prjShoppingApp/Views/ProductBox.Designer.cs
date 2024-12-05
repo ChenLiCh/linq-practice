@@ -1,7 +1,5 @@
-﻿namespace prjShoppingApp.Views
-{
-    partial class ProductBox
-    {
+﻿namespace prjShoppingApp.Views {
+    partial class ProductBox {
         /// <summary> 
         /// 設計工具所需的變數。
         /// </summary>
@@ -11,10 +9,8 @@
         /// 清除任何使用中的資源。
         /// </summary>
         /// <param name="disposing">如果應該處置受控資源則為 true，否則為 false。</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
+        protected override void Dispose(bool disposing) {
+            if (disposing && (components != null)) {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -26,8 +22,7 @@
         /// 此為設計工具支援所需的方法 - 請勿使用程式碼編輯器修改
         /// 這個方法的內容。
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblPrice = new System.Windows.Forms.Label();
             this.lblMemo = new System.Windows.Forms.Label();

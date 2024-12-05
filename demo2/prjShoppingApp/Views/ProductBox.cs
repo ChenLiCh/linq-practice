@@ -9,22 +9,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace prjShoppingApp.Views
-{
+namespace prjShoppingApp.Views {
     public delegate void DProductClick(tProduct p);
-    public partial class ProductBox : UserControl
-    {
+    public partial class ProductBox : UserControl {
+
         public event DProductClick addToCart;
+
         private tProduct _product;
-        public ProductBox()
-        {
+
+        public ProductBox() {
             InitializeComponent();
         }
-        public tProduct product
-        {
+
+        public tProduct product {
             get { return _product; }
-            set
-            {
+            set {
                 _product = value;
                 lblMemo.Text = _product.fMemo;
                 lblName.Text = _product.fName;
@@ -34,26 +33,22 @@ namespace prjShoppingApp.Views
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
+        private void pictureBox1_Click(object sender, EventArgs e) {
             if (addToCart != null)
                 addToCart(this._product);
         }
 
-        private void lblName_Click(object sender, EventArgs e)
-        {
+        private void lblName_Click(object sender, EventArgs e) {
             if (addToCart != null)
                 addToCart(this._product);
         }
 
-        private void lblMemo_Click(object sender, EventArgs e)
-        {
+        private void lblMemo_Click(object sender, EventArgs e) {
             if (addToCart != null)
                 addToCart(this._product);
         }
 
-        private void lblPrice_Click(object sender, EventArgs e)
-        {
+        private void lblPrice_Click(object sender, EventArgs e) {
             if (addToCart != null)
                 addToCart(this._product);
         }

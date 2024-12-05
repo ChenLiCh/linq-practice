@@ -11,30 +11,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace prjPosDemo.Views
-{
-    public partial class FrmProductList : Form
-    {
+namespace prjPosDemo.Views {
+    public partial class FrmProductList : Form {
         //private int _pageCount = 3;
         int _position = -1;
         private List<CProductWrap> _list;
-        public FrmProductList()
-        {
+        public FrmProductList() {
             InitializeComponent();
         }
 
-        private void FrmProductList_Paint(object sender, PaintEventArgs e)
-        {
+        private void FrmProductList_Paint(object sender, PaintEventArgs e) {
             resetGridStyle();
         }
 
-        private void FrmProductList_Load(object sender, EventArgs e)
-        {
+        private void FrmProductList_Load(object sender, EventArgs e) {
             displayProducts();
         }
 
-        private void displayProducts()
-        {
+        private void displayProducts() {
             dbDemoEntities3 db = new dbDemoEntities3();
             var datas = from c in db.tProduct
                         select c;
@@ -46,14 +40,12 @@ namespace prjPosDemo.Views
             resetGridStyle();
         }
 
-        private void resetGridStyle()
-        {
+        private void resetGridStyle() {
             // 設定各欄位寬度
             dataGridView1.Columns[0].Width = 50;
             dataGridView1.Columns[1].Width = 100;
 
-            if (dataGridView1.Columns.Count > 2)
-            {
+            if (dataGridView1.Columns.Count > 2) {
                 dataGridView1.Columns[2].Width = 200;
                 dataGridView1.Columns[3].Width = 200;
                 dataGridView1.Columns[4].Width = 200;
@@ -64,8 +56,7 @@ namespace prjPosDemo.Views
             //dataGridView1.Columns[5].Width = dataGridView1.Width - 50 - 400 - 100 * 3 - 200 - dataGridView1.RowHeadersWidth;
 
             bool isColorChanged = false;
-            foreach (DataGridViewRow r in dataGridView1.Rows)
-            {
+            foreach (DataGridViewRow r in dataGridView1.Rows) {
                 isColorChanged = !isColorChanged;
 
                 // 各列的字體和大小
@@ -78,13 +69,11 @@ namespace prjPosDemo.Views
         }
 
         // 新增按鈕
-        private void btnInsert_Click(object sender, EventArgs e)
-        {
+        private void btnInsert_Click(object sender, EventArgs e) {
             FrmProductEditor f = new FrmProductEditor();
             f.ShowDialog();
 
-            if (f.isOk == DialogResult.OK)
-            {
+            if (f.isOk == DialogResult.OK) {
                 dbDemoEntities3 db = new dbDemoEntities3();
                 db.tProduct.Add(f.product);
                 db.SaveChanges();
@@ -93,8 +82,7 @@ namespace prjPosDemo.Views
         }
 
         // 刪除按鈕
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
+        private void btnDelete_Click(object sender, EventArgs e) {
             // 第一個參數: "確定要刪除嗎?" 是對話框中顯示的訊息，表示詢問使用者是否確定要刪除。
             // 第二個參數: "確認" 是對話框的標題，表示該對話框的用途。
             // 第三個參數: MessageBoxButtons.YesNo 是按鈕選項，表示該對話框會有「是(Yes)」和「否(No)」兩個選擇。
@@ -121,18 +109,15 @@ namespace prjPosDemo.Views
         }
 
         // 編輯按鈕
-        private void toolStripButton4_Click(object sender, EventArgs e)
-        {
+        private void toolStripButton4_Click(object sender, EventArgs e) {
             editProductSelected();
         }
 
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e) {
             editProductSelected();
         }
 
-        private void editProductSelected()
-        {
+        private void editProductSelected() {
             if (_position < 0) return;
 
             // 顯示舊資料
@@ -142,8 +127,7 @@ namespace prjPosDemo.Views
             f.ShowDialog();
 
             // 按下確定後，把修改後的資料存進資料庫
-            if (f.isOk == DialogResult.OK)
-            {
+            if (f.isOk == DialogResult.OK) {
                 dbDemoEntities3 db = new dbDemoEntities3();
                 tProduct dbProduct = db.tProduct.FirstOrDefault(t => t.fId == f.product.fId);
                 if (dbProduct == null) return;
@@ -159,14 +143,12 @@ namespace prjPosDemo.Views
             }
         }
 
-        private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {
+        private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e) {
             _position = e.RowIndex;
         }
 
         // 搜尋按鈕
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
+        private void toolStripButton1_Click(object sender, EventArgs e) {
             dbDemoEntities3 db = new dbDemoEntities3();
 
             // 原本的語法==================================================
