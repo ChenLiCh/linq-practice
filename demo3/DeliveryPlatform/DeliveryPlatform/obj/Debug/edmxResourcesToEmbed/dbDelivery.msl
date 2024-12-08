@@ -16,13 +16,13 @@
     <EntitySetMapping Name="tMeal">
       <EntityTypeMapping TypeName="dbDeliveryModel.tMeal">
         <MappingFragment StoreEntitySet="tMeal">
-          <ScalarProperty Name="fId" ColumnName="fId" />
+          <ScalarProperty Name="fMealImage" ColumnName="fMealImage" />
+          <ScalarProperty Name="fMealMemo" ColumnName="fMealMemo" />
+          <ScalarProperty Name="fMealPrice" ColumnName="fMealPrice" />
+          <ScalarProperty Name="fMealCost" ColumnName="fMealCost" />
+          <ScalarProperty Name="fMealQuantity" ColumnName="fMealQuantity" />
           <ScalarProperty Name="fMealName" ColumnName="fMealName" />
-          <ScalarProperty Name="fQuantity" ColumnName="fQuantity" />
-          <ScalarProperty Name="fCost" ColumnName="fCost" />
-          <ScalarProperty Name="fPrice" ColumnName="fPrice" />
-          <ScalarProperty Name="fMemo" ColumnName="fMemo" />
-          <ScalarProperty Name="fImage" ColumnName="fImage" />
+          <ScalarProperty Name="fMealId" ColumnName="fMealId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

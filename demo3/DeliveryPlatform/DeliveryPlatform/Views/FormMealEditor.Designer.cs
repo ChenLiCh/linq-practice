@@ -23,33 +23,34 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnConfirm = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.fbPrice = new prjCustomerDemo.userControl.FieldBox();
-            this.fbMemo = new prjCustomerDemo.userControl.FieldBox();
-            this.fbCost = new prjCustomerDemo.userControl.FieldBox();
-            this.fbQty = new prjCustomerDemo.userControl.FieldBox();
-            this.fbName = new prjCustomerDemo.userControl.FieldBox();
+            this.fbMealPrice = new prjCustomerDemo.userControl.FieldBox();
+            this.fbMealMemo = new prjCustomerDemo.userControl.FieldBox();
+            this.fbMealCost = new prjCustomerDemo.userControl.FieldBox();
+            this.fbMealQty = new prjCustomerDemo.userControl.FieldBox();
+            this.fbMealName = new prjCustomerDemo.userControl.FieldBox();
             this.fbMealId = new prjCustomerDemo.userControl.FieldBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnConfirm
             // 
-            this.button1.Font = new System.Drawing.Font("微軟正黑體", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button1.Location = new System.Drawing.Point(624, 395);
-            this.button1.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(65, 30);
-            this.button1.TabIndex = 40;
-            this.button1.Text = "確認";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnConfirm.Font = new System.Drawing.Font("微軟正黑體", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnConfirm.Location = new System.Drawing.Point(624, 395);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(65, 30);
+            this.btnConfirm.TabIndex = 40;
+            this.btnConfirm.Text = "確認";
+            this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // label3
             // 
@@ -63,16 +64,17 @@
             this.label3.TabIndex = 39;
             this.label3.Text = "* 表示必須填寫";
             // 
-            // button2
+            // btnCancel
             // 
-            this.button2.Font = new System.Drawing.Font("微軟正黑體", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button2.Location = new System.Drawing.Point(542, 395);
-            this.button2.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(65, 30);
-            this.button2.TabIndex = 38;
-            this.button2.Text = "取消";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCancel.Font = new System.Drawing.Font("微軟正黑體", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnCancel.Location = new System.Drawing.Point(542, 395);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(65, 30);
+            this.btnCancel.TabIndex = 38;
+            this.btnCancel.Text = "取消";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label5
             // 
@@ -123,60 +125,60 @@
             this.label2.TabIndex = 34;
             this.label2.Text = "*";
             // 
-            // fbPrice
+            // fbMealPrice
             // 
-            this.fbPrice.fieldName = "價格";
-            this.fbPrice.fieldValue = "1";
-            this.fbPrice.Location = new System.Drawing.Point(224, 236);
-            this.fbPrice.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
-            this.fbPrice.Name = "fbPrice";
-            this.fbPrice.passwordMask = '\0';
-            this.fbPrice.Size = new System.Drawing.Size(189, 54);
-            this.fbPrice.TabIndex = 33;
+            this.fbMealPrice.fieldName = "價格";
+            this.fbMealPrice.fieldValue = "1";
+            this.fbMealPrice.Location = new System.Drawing.Point(224, 236);
+            this.fbMealPrice.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            this.fbMealPrice.Name = "fbMealPrice";
+            this.fbMealPrice.passwordMask = '\0';
+            this.fbMealPrice.Size = new System.Drawing.Size(189, 54);
+            this.fbMealPrice.TabIndex = 33;
             // 
-            // fbMemo
+            // fbMealMemo
             // 
-            this.fbMemo.fieldName = "說明";
-            this.fbMemo.fieldValue = "";
-            this.fbMemo.Location = new System.Drawing.Point(18, 304);
-            this.fbMemo.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
-            this.fbMemo.Name = "fbMemo";
-            this.fbMemo.passwordMask = '\0';
-            this.fbMemo.Size = new System.Drawing.Size(395, 54);
-            this.fbMemo.TabIndex = 32;
+            this.fbMealMemo.fieldName = "說明";
+            this.fbMealMemo.fieldValue = "";
+            this.fbMealMemo.Location = new System.Drawing.Point(18, 304);
+            this.fbMealMemo.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            this.fbMealMemo.Name = "fbMealMemo";
+            this.fbMealMemo.passwordMask = '\0';
+            this.fbMealMemo.Size = new System.Drawing.Size(395, 54);
+            this.fbMealMemo.TabIndex = 32;
             // 
-            // fbCost
+            // fbMealCost
             // 
-            this.fbCost.fieldName = "成本";
-            this.fbCost.fieldValue = "1";
-            this.fbCost.Location = new System.Drawing.Point(18, 236);
-            this.fbCost.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
-            this.fbCost.Name = "fbCost";
-            this.fbCost.passwordMask = '\0';
-            this.fbCost.Size = new System.Drawing.Size(189, 54);
-            this.fbCost.TabIndex = 31;
+            this.fbMealCost.fieldName = "成本";
+            this.fbMealCost.fieldValue = "1";
+            this.fbMealCost.Location = new System.Drawing.Point(18, 236);
+            this.fbMealCost.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            this.fbMealCost.Name = "fbMealCost";
+            this.fbMealCost.passwordMask = '\0';
+            this.fbMealCost.Size = new System.Drawing.Size(189, 54);
+            this.fbMealCost.TabIndex = 31;
             // 
-            // fbQty
+            // fbMealQty
             // 
-            this.fbQty.fieldName = "數量";
-            this.fbQty.fieldValue = "1";
-            this.fbQty.Location = new System.Drawing.Point(18, 165);
-            this.fbQty.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
-            this.fbQty.Name = "fbQty";
-            this.fbQty.passwordMask = '\0';
-            this.fbQty.Size = new System.Drawing.Size(395, 55);
-            this.fbQty.TabIndex = 30;
+            this.fbMealQty.fieldName = "數量";
+            this.fbMealQty.fieldValue = "1";
+            this.fbMealQty.Location = new System.Drawing.Point(18, 165);
+            this.fbMealQty.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            this.fbMealQty.Name = "fbMealQty";
+            this.fbMealQty.passwordMask = '\0';
+            this.fbMealQty.Size = new System.Drawing.Size(395, 55);
+            this.fbMealQty.TabIndex = 30;
             // 
-            // fbName
+            // fbMealName
             // 
-            this.fbName.fieldName = "品名";
-            this.fbName.fieldValue = "";
-            this.fbName.Location = new System.Drawing.Point(18, 90);
-            this.fbName.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
-            this.fbName.Name = "fbName";
-            this.fbName.passwordMask = '\0';
-            this.fbName.Size = new System.Drawing.Size(395, 54);
-            this.fbName.TabIndex = 29;
+            this.fbMealName.fieldName = "品名";
+            this.fbMealName.fieldValue = "";
+            this.fbMealName.Location = new System.Drawing.Point(18, 90);
+            this.fbMealName.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            this.fbMealName.Name = "fbMealName";
+            this.fbMealName.passwordMask = '\0';
+            this.fbMealName.Size = new System.Drawing.Size(395, 54);
+            this.fbMealName.TabIndex = 29;
             // 
             // fbMealId
             // 
@@ -199,18 +201,18 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(708, 443);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.fbPrice);
-            this.Controls.Add(this.fbMemo);
-            this.Controls.Add(this.fbCost);
-            this.Controls.Add(this.fbQty);
-            this.Controls.Add(this.fbName);
+            this.Controls.Add(this.fbMealPrice);
+            this.Controls.Add(this.fbMealMemo);
+            this.Controls.Add(this.fbMealCost);
+            this.Controls.Add(this.fbMealQty);
+            this.Controls.Add(this.fbMealName);
             this.Controls.Add(this.fbMealId);
             this.Name = "FormMealEditor";
             this.Text = "FormMealEditor";
@@ -222,18 +224,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private prjCustomerDemo.userControl.FieldBox fbPrice;
-        private prjCustomerDemo.userControl.FieldBox fbMemo;
-        private prjCustomerDemo.userControl.FieldBox fbCost;
-        private prjCustomerDemo.userControl.FieldBox fbQty;
-        private prjCustomerDemo.userControl.FieldBox fbName;
+        private prjCustomerDemo.userControl.FieldBox fbMealPrice;
+        private prjCustomerDemo.userControl.FieldBox fbMealMemo;
+        private prjCustomerDemo.userControl.FieldBox fbMealCost;
+        private prjCustomerDemo.userControl.FieldBox fbMealQty;
+        private prjCustomerDemo.userControl.FieldBox fbMealName;
         private prjCustomerDemo.userControl.FieldBox fbMealId;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }

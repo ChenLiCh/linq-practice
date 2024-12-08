@@ -8,12 +8,12 @@ namespace prjPosDemo.Models
 {
     public class CProductWrap
     {
+        private tProduct _product;
+
         public CProductWrap(tProduct p)
         {
             _product = p;
         }
-
-        private tProduct _product;
 
         public tProduct product
         {

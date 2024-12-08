@@ -42,6 +42,7 @@
             this.btnCancel.TabIndex = 16;
             this.btnCancel.Text = "取消";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnConfirm
             // 
@@ -52,6 +53,7 @@
             this.btnConfirm.TabIndex = 15;
             this.btnConfirm.Text = "確定";
             this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // fbCustomerPassword
             // 

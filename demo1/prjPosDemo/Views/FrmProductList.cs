@@ -152,16 +152,14 @@ namespace prjPosDemo.Views {
             dbDemoEntities3 db = new dbDemoEntities3();
 
             // 原本的語法==================================================
-            //var x = from c in db.tProduct
-            //        where c.fName.Contains(txtKeyword.Text) || c.fMemo.Contains(txtKeyword.Text)
-            //        select c;
-            //_list = x.ToList();
-            //dataGridView1.DataSource = _list;
+            var x = from c in db.tProduct
+                    where c.fName.Contains(txtKeyword.Text) || c.fMemo.Contains(txtKeyword.Text)
+                    select c;
+            dataGridView1.DataSource = x.ToList();
             // ============================================================
 
             // 第 2 種寫法
-            // _list = db.tProduct.Where(c => c.fName.Contains(txtKeyword.Text) || c.fMemo.Contains(txtKeyword.Text)).ToList();
-            // dataGridView1.DataSource = _list;
+            //dataGridView1.DataSource = db.tProduct.Where(c => c.fName.Contains(txtKeyword.Text) || c.fMemo.Contains(txtKeyword.Text)).ToList();
             // ============================================================
 
             // 第 3 種寫法

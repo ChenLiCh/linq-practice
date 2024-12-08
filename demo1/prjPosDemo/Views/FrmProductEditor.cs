@@ -9,20 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace prjPosDemo.Views
-{
-    public partial class FrmProductEditor : Form
-    {
-        public DialogResult isOk {  get; set; }
+namespace prjPosDemo.Views {
+    public partial class FrmProductEditor : Form {
+        public DialogResult isOk { get; set; }
         private tProduct _product;
-        public tProduct product
-        {
-            get
-            {
-                if (_product == null)
-                {
-                    _product = new tProduct();
-                }
+        public tProduct product {
+            get {
+                if (_product == null) _product = new tProduct();
                 _product.fId = Convert.ToInt32(fbId.fieldValue);
                 _product.fName = fbName.fieldValue;
                 _product.fQty = Convert.ToInt32(fbQty.fieldValue);
@@ -31,9 +24,7 @@ namespace prjPosDemo.Views
                 _product.fMemo = fbMemo.fieldValue;
                 return _product;
             }
-            // 物件資料填進表格內
-            set
-            {
+            set {
                 _product = value;
                 fbId.fieldValue = _product.fId.ToString();
                 fbName.fieldValue = _product.fName;
@@ -41,10 +32,8 @@ namespace prjPosDemo.Views
                 fbPrice.fieldValue = _product.fPrice.ToString();
                 fbCost.fieldValue = _product.fCost.ToString();
                 fbMemo.fieldValue = _product.fMemo;
-                if (_product.fImage != null)
-                {
-                    try
-                    {
+                if (_product.fImage != null) {
+                    try {
                         Stream streamImage = new MemoryStream(_product.fImage);
                         pictureBox1.Image = Bitmap.FromStream(streamImage);
                     }
@@ -52,27 +41,23 @@ namespace prjPosDemo.Views
                 }
             }
         }
-        public FrmProductEditor()
-        {
+        public FrmProductEditor() {
             InitializeComponent();
         }
 
         // 確認按鈕
-        private void button1_Click(object sender, EventArgs e)
-        {
+        private void button1_Click(object sender, EventArgs e) {
             string message = "";
             if (string.IsNullOrEmpty(fbName.fieldValue))
                 message += "\r\n品名不可空白";
             if (string.IsNullOrEmpty(fbPrice.fieldValue))
                 message += "\r\n價格不可空白";
-            else
-            {
+            else {
                 if (!isNumber(fbPrice.fieldValue))
                     message += "\r\n價格必須是數字";
             }
 
-            if (!string.IsNullOrEmpty(message))
-            {
+            if (!string.IsNullOrEmpty(message)) {
                 MessageBox.Show(message);
                 return;
             }
@@ -81,26 +66,21 @@ namespace prjPosDemo.Views
             Close();
         }
 
-        private bool isNumber(string p)
-        {
-            try
-            {
+        private bool isNumber(string p) {
+            try {
                 double d = Convert.ToDouble(p);
                 return true;
             }
-            catch
-            {
+            catch {
                 return false;
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
+        private void button2_Click(object sender, EventArgs e) {
             Close();
         }
 
-        private void pictureBox1_DoubleClick(object sender, EventArgs e)
-        {
+        private void pictureBox1_DoubleClick(object sender, EventArgs e) {
             // 只有 *.png 或 *.jpg 的檔案可以被使用者看到並選取
             openFileDialog1.Filter = "商品照片|*.png|'商品照片|*.jpg";
             if (openFileDialog1.ShowDialog() != DialogResult.OK) return;

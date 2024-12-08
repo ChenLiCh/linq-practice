@@ -13,15 +13,15 @@
   </EntityType>
   <EntityType Name="tMeal">
     <Key>
-      <PropertyRef Name="fId" />
+      <PropertyRef Name="fMealId" />
     </Key>
-    <Property Name="fId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fMealId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="fMealName" Type="nchar" MaxLength="50" />
-    <Property Name="fQuantity" Type="int" />
-    <Property Name="fCost" Type="money" />
-    <Property Name="fPrice" Type="money" />
-    <Property Name="fMemo" Type="nchar" MaxLength="200" />
-    <Property Name="fImage" Type="image" />
+    <Property Name="fMealQuantity" Type="int" />
+    <Property Name="fMealCost" Type="money" />
+    <Property Name="fMealPrice" Type="money" />
+    <Property Name="fMealMemo" Type="nchar" MaxLength="200" />
+    <Property Name="fMealImage" Type="image" />
   </EntityType>
   <EntityContainer Name="dbDeliveryModelStoreContainer">
     <EntitySet Name="tCustomer" EntityType="Self.tCustomer" Schema="dbo" store:Type="Tables" />

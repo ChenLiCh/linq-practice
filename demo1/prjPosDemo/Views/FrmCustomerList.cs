@@ -292,8 +292,8 @@ namespace prjPosDemo.Views
         }
 
         // delegate 逐漸轉變成 Lambda 的過程==========================================
-        //public void callM1()
-        //{
+        //public void callM1() {
+        //    // 建立 delegate 物件實例，並將此物件綁定目標 method(下面兩種方法都可以)
         //    D1 d = new D1(this.m1);
         //    MessageBox.Show(d.ToString());
         //}

@@ -11,20 +11,20 @@
     <Property Name="fCustomerPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="fCustomerAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
-  <EntityType Name="tMeal">
-    <Key>
-      <PropertyRef Name="fId" />
-    </Key>
-    <Property Name="fId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="fMealName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
-    <Property Name="fQuantity" Type="Int32" />
-    <Property Name="fCost" Type="Decimal" Precision="19" Scale="4" />
-    <Property Name="fPrice" Type="Decimal" Precision="19" Scale="4" />
-    <Property Name="fMemo" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
-    <Property Name="fImage" Type="Binary" MaxLength="Max" FixedLength="false" />
-  </EntityType>
   <EntityContainer Name="dbDeliveryEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="tCustomer" EntityType="Self.tCustomer" />
-    <EntitySet Name="tMeal" EntityType="Self.tMeal" />
+    <EntitySet Name="tMeal" EntityType="dbDeliveryModel.tMeal" />
   </EntityContainer>
+  <EntityType Name="tMeal">
+    <Key>
+      <PropertyRef Name="fMealId" />
+    </Key>
+    <Property Name="fMealId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fMealName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="fMealQuantity" Type="Int32" />
+    <Property Name="fMealCost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="fMealPrice" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="fMealMemo" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <Property Name="fMealImage" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
 </Schema>
