@@ -100,7 +100,7 @@ namespace DeliveryPlatform.Views {
 
             if (MessageBox.Show("確定要刪除嗎?", "確認", MessageBoxButtons.YesNo) == DialogResult.No) return;
 
-            tCustomer uiCustomer = new tCustomer();
+            tCustomer uiCustomer = _list[_position];
 
             dbDeliveryEntities db = new dbDeliveryEntities();
 

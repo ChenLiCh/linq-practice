@@ -1,30 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\iSpan\\linq-practice\\demo3\\DeliveryPlatform\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo3\\DeliveryPlatform\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{691B1B8A-3786-4946-96ED-5A8D72C356DD}|DeliveryPlatform\\DeliveryPlatform.csproj|c:\\ispan\\linq-practice\\demo3\\deliveryplatform\\deliveryplatform\\views\\formcustomerlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{691B1B8A-3786-4946-96ED-5A8D72C356DD}|DeliveryPlatform\\DeliveryPlatform.csproj|solutionrelative:deliveryplatform\\views\\formcustomerlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{691B1B8A-3786-4946-96ED-5A8D72C356DD}|DeliveryPlatform\\DeliveryPlatform.csproj|c:\\ispan\\linq-practice\\demo3\\deliveryplatform\\deliveryplatform\\views\\formmealeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{691B1B8A-3786-4946-96ED-5A8D72C356DD}|DeliveryPlatform\\DeliveryPlatform.csproj|solutionrelative:deliveryplatform\\views\\formmealeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{691B1B8A-3786-4946-96ED-5A8D72C356DD}|DeliveryPlatform\\DeliveryPlatform.csproj|c:\\ispan\\linq-practice\\demo3\\deliveryplatform\\deliveryplatform\\views\\formmeallist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{691B1B8A-3786-4946-96ED-5A8D72C356DD}|DeliveryPlatform\\DeliveryPlatform.csproj|C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo3\\DeliveryPlatform\\deliveryplatform\\views\\formmeallist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{691B1B8A-3786-4946-96ED-5A8D72C356DD}|DeliveryPlatform\\DeliveryPlatform.csproj|solutionrelative:deliveryplatform\\views\\formmeallist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{691B1B8A-3786-4946-96ED-5A8D72C356DD}|DeliveryPlatform\\DeliveryPlatform.csproj|c:\\ispan\\linq-practice\\demo3\\deliveryplatform\\deliveryplatform\\models\\cmealwrap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{691B1B8A-3786-4946-96ED-5A8D72C356DD}|DeliveryPlatform\\DeliveryPlatform.csproj|C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo3\\DeliveryPlatform\\deliveryplatform\\views\\formmealeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{691B1B8A-3786-4946-96ED-5A8D72C356DD}|DeliveryPlatform\\DeliveryPlatform.csproj|solutionrelative:deliveryplatform\\views\\formmealeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{691B1B8A-3786-4946-96ED-5A8D72C356DD}|DeliveryPlatform\\DeliveryPlatform.csproj|C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo3\\DeliveryPlatform\\deliveryplatform\\views\\formmealeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{691B1B8A-3786-4946-96ED-5A8D72C356DD}|DeliveryPlatform\\DeliveryPlatform.csproj|solutionrelative:deliveryplatform\\views\\formmealeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{691B1B8A-3786-4946-96ED-5A8D72C356DD}|DeliveryPlatform\\DeliveryPlatform.csproj|c:\\users\\user\\desktop\\learn\\slndemo-linq\\slndemo-linq\\demo3\\deliveryplatform\\deliveryplatform\\views\\formcustomerlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{691B1B8A-3786-4946-96ED-5A8D72C356DD}|DeliveryPlatform\\DeliveryPlatform.csproj|solutionrelative:deliveryplatform\\views\\formcustomerlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{691B1B8A-3786-4946-96ED-5A8D72C356DD}|DeliveryPlatform\\DeliveryPlatform.csproj|C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo3\\DeliveryPlatform\\deliveryplatform\\models\\cmealwrap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{691B1B8A-3786-4946-96ED-5A8D72C356DD}|DeliveryPlatform\\DeliveryPlatform.csproj|solutionrelative:deliveryplatform\\models\\cmealwrap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{691B1B8A-3786-4946-96ED-5A8D72C356DD}|DeliveryPlatform\\DeliveryPlatform.csproj|c:\\ispan\\linq-practice\\demo3\\deliveryplatform\\deliveryplatform\\views\\formmeallist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{691B1B8A-3786-4946-96ED-5A8D72C356DD}|DeliveryPlatform\\DeliveryPlatform.csproj|C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo3\\DeliveryPlatform\\deliveryplatform\\views\\formmeallist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{691B1B8A-3786-4946-96ED-5A8D72C356DD}|DeliveryPlatform\\DeliveryPlatform.csproj|solutionrelative:deliveryplatform\\views\\formmeallist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{691B1B8A-3786-4946-96ED-5A8D72C356DD}|DeliveryPlatform\\DeliveryPlatform.csproj|c:\\ispan\\linq-practice\\demo3\\deliveryplatform\\deliveryplatform\\views\\formmealeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{691B1B8A-3786-4946-96ED-5A8D72C356DD}|DeliveryPlatform\\DeliveryPlatform.csproj|solutionrelative:deliveryplatform\\views\\formmealeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,17 +34,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 117,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "FormMealList.cs",
-              "DocumentMoniker": "C:\\iSpan\\linq-practice\\demo3\\DeliveryPlatform\\DeliveryPlatform\\Views\\FormMealList.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo3\\DeliveryPlatform\\DeliveryPlatform\\Views\\FormMealList.cs",
               "RelativeDocumentMoniker": "DeliveryPlatform\\Views\\FormMealList.cs",
-              "ToolTip": "C:\\iSpan\\linq-practice\\demo3\\DeliveryPlatform\\DeliveryPlatform\\Views\\FormMealList.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo3\\DeliveryPlatform\\DeliveryPlatform\\Views\\FormMealList.cs",
               "RelativeToolTip": "DeliveryPlatform\\Views\\FormMealList.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAswI0AAAAJAAAAAAAAAA==",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAmwGgAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-08T07:13:08.485Z",
               "IsPinned": true,
@@ -54,11 +54,11 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "FormMealEditor.cs",
-              "DocumentMoniker": "C:\\iSpan\\linq-practice\\demo3\\DeliveryPlatform\\DeliveryPlatform\\Views\\FormMealEditor.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo3\\DeliveryPlatform\\DeliveryPlatform\\Views\\FormMealEditor.cs",
               "RelativeDocumentMoniker": "DeliveryPlatform\\Views\\FormMealEditor.cs",
-              "ToolTip": "C:\\iSpan\\linq-practice\\demo3\\DeliveryPlatform\\DeliveryPlatform\\Views\\FormMealEditor.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo3\\DeliveryPlatform\\DeliveryPlatform\\Views\\FormMealEditor.cs",
               "RelativeToolTip": "DeliveryPlatform\\Views\\FormMealEditor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAZAAAAAAAAAA==",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABMAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-08T08:23:23.831Z",
               "IsPinned": true,
@@ -66,24 +66,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "FormCustomerList.cs",
-              "DocumentMoniker": "C:\\iSpan\\linq-practice\\demo3\\DeliveryPlatform\\DeliveryPlatform\\Views\\FormCustomerList.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo3\\DeliveryPlatform\\DeliveryPlatform\\Views\\FormCustomerList.cs",
               "RelativeDocumentMoniker": "DeliveryPlatform\\Views\\FormCustomerList.cs",
-              "ToolTip": "C:\\iSpan\\linq-practice\\demo3\\DeliveryPlatform\\DeliveryPlatform\\Views\\FormCustomerList.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo3\\DeliveryPlatform\\DeliveryPlatform\\Views\\FormCustomerList.cs",
               "RelativeToolTip": "DeliveryPlatform\\Views\\FormCustomerList.cs",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAkwH4AAAAgAAAAAAAAAA==",
+              "ViewState": "AQIAAG8AAAAAAAAAAAAkwGYAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-08T14:44:10.548Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "FormMealEditor.cs [\u8A2D\u8A08]",
-              "DocumentMoniker": "C:\\iSpan\\linq-practice\\demo3\\DeliveryPlatform\\DeliveryPlatform\\Views\\FormMealEditor.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo3\\DeliveryPlatform\\DeliveryPlatform\\Views\\FormMealEditor.cs",
               "RelativeDocumentMoniker": "DeliveryPlatform\\Views\\FormMealEditor.cs",
-              "ToolTip": "C:\\iSpan\\linq-practice\\demo3\\DeliveryPlatform\\DeliveryPlatform\\Views\\FormMealEditor.cs [\u8A2D\u8A08]",
+              "ToolTip": "C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo3\\DeliveryPlatform\\DeliveryPlatform\\Views\\FormMealEditor.cs [\u8A2D\u8A08]",
               "RelativeToolTip": "DeliveryPlatform\\Views\\FormMealEditor.cs [\u8A2D\u8A08]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-08T08:27:02.28Z",
@@ -91,24 +91,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "CMealWrap.cs",
-              "DocumentMoniker": "C:\\iSpan\\linq-practice\\demo3\\DeliveryPlatform\\DeliveryPlatform\\Models\\CMealWrap.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo3\\DeliveryPlatform\\DeliveryPlatform\\Models\\CMealWrap.cs",
               "RelativeDocumentMoniker": "DeliveryPlatform\\Models\\CMealWrap.cs",
-              "ToolTip": "C:\\iSpan\\linq-practice\\demo3\\DeliveryPlatform\\DeliveryPlatform\\Models\\CMealWrap.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo3\\DeliveryPlatform\\DeliveryPlatform\\Models\\CMealWrap.cs",
               "RelativeToolTip": "DeliveryPlatform\\Models\\CMealWrap.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T07:54:03.888Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-08T07:54:03.888Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "FormMealList.cs [\u8A2D\u8A08]",
-              "DocumentMoniker": "C:\\iSpan\\linq-practice\\demo3\\DeliveryPlatform\\DeliveryPlatform\\Views\\FormMealList.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo3\\DeliveryPlatform\\DeliveryPlatform\\Views\\FormMealList.cs",
               "RelativeDocumentMoniker": "DeliveryPlatform\\Views\\FormMealList.cs",
-              "ToolTip": "C:\\iSpan\\linq-practice\\demo3\\DeliveryPlatform\\DeliveryPlatform\\Views\\FormMealList.cs [\u8A2D\u8A08]",
+              "ToolTip": "C:\\Users\\User\\Desktop\\learn\\slnDemo-linq\\slnDemo-linq\\demo3\\DeliveryPlatform\\DeliveryPlatform\\Views\\FormMealList.cs [\u8A2D\u8A08]",
               "RelativeToolTip": "DeliveryPlatform\\Views\\FormMealList.cs [\u8A2D\u8A08]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-08T07:13:05.29Z",

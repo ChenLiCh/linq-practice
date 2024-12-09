@@ -60,20 +60,6 @@ namespace DeliveryPlatform.Views {
             Close();
         }
 
-        private void pictureBox1_DoubleClick(object sender, EventArgs e) {
-            // 只有 *.png 或 *.jpg 的檔案可以被使用者看到並選取
-            openFileDialog1.Filter = "商品照片|*.png|'商品照片|*.jpg";
-            if (openFileDialog1.ShowDialog() != DialogResult.OK) return;
-            pictureBox1.Image = Bitmap.FromFile(openFileDialog1.FileName);
-
-            // 串流
-            FileStream imgStream = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
-            BinaryReader reader = new BinaryReader(imgStream);
-            this._meal.fMealImage = reader.ReadBytes((int)imgStream.Length);
-            reader.Close();
-            imgStream.Close();
-        }
-
         // 確認按鈕
         private void btnConfirm_Click(object sender, EventArgs e) {
             string message = "";
@@ -98,6 +84,20 @@ namespace DeliveryPlatform.Views {
         // 取消按鈕
         private void btnCancel_Click(object sender, EventArgs e) {
             Close();
+        }
+
+        private void pictureBox1_DoubleClick_1(object sender, EventArgs e) {
+            // 只有 *.png 或 *.jpg 的檔案可以被使用者看到並選取
+            openFileDialog1.Filter = "商品照片|*.png|'商品照片|*.jpg";
+            if (openFileDialog1.ShowDialog() != DialogResult.OK) return;
+            pictureBox1.Image = Bitmap.FromFile(openFileDialog1.FileName);
+
+            // 串流
+            FileStream imgStream = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
+            BinaryReader reader = new BinaryReader(imgStream);
+            this.meal.fMealImage = reader.ReadBytes((int)imgStream.Length);
+            reader.Close();
+            imgStream.Close();
         }
     }
 }
